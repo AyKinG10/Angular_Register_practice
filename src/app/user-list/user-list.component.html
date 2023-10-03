@@ -1,0 +1,25 @@
+<br>
+<div class="container">
+  <a class="btn btn-primary" href="/registration">Back To Register</a>
+  <h1 align="center">User List</h1>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>
+       <button class="btn btn-primary btn-sm" >Edit</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

@@ -1,0 +1,24 @@
+<br>
+
+
+<div class="container">
+  <a class="btn btn-primary" href="/registration">Back To Register</a><br><br>
+  <a class="btn btn-primary" href="/user-list">User list</a>
+  <div class="card mt-4" *ngIf="user; else noUser">
+    <div class="card-header">
+      <h2 class="mb-0">My Profile</h2>
+    </div>
+    <div class="card-body profile">
+      <p class="card-text"><strong>Name:</strong> {{ user?.name }}</p>
+      <p class="card-text"><strong>Email:</strong> {{ user?.email }}</p>
+    </div>
+  </div>
+
+  <ng-template #noUser>
+    <div class="alert alert-warning mt-4">
+      <strong>Пользователь не найден.</strong>
+    </div>
+  </ng-template>
+</div>
+
+
